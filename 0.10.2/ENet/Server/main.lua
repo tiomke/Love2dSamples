@@ -13,3 +13,8 @@ function love.update(dt)
     end
   end
 end
+
+
+-- connect..	127.0.0.1:60551
+-- get message	ping
+-- disconnect..	127.0.0.1:60551

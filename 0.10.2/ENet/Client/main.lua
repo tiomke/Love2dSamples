@@ -17,3 +17,5 @@ function love.update(dt)
     end
   end
 end
+
+-- connect..	127.0.0.1:6789
