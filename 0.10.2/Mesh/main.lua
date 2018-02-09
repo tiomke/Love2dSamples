@@ -4,7 +4,7 @@ function love.load()
  
     -- We want to make a Mesh with 1 vertex in the middle of the image, and 4 at the corners.
     local vertices = {
-        {w/6, h/6, 0.5, 0.5, 255,   0,   0}, -- Center vertex, with a red tint.
+        {w/5, h/5, 0.5, 0.5, 255,   0,   0}, -- Center vertex, with a red tint.
         {0,   0,   0,   0,   255, 255, 255}, -- Top left.
         {w,   0,   1,   0,   255, 255, 255}, -- Top right.
         {w,   h,   1,   1,   255, 255, 255}, -- Bottom right.
