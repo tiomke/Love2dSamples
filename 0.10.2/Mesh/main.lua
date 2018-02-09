@@ -11,14 +11,18 @@ function love.load()
         {0,   h,   0,   1,   255, 255, 255}, -- Bottom left.
     }
  
+
     -- But there's a problem! The drawn mesh will have a big triangle missing on its left side.
     -- This is because, in the default mesh draw mode ("fan"), the vertices don't "loop": the top left vertex (#2) is unconnected to the bottom left one (#5).
     mesh = love.graphics.newMesh(vertices)
+    -- mesh:setDrawRange(1,3)
+    print(mesh:getDrawRange())
     mesh:setTexture(image)
  
     -- We could copy/paste the second vertex onto the end of the table of vertices.
     -- But instead we can just change the vertex map!
-    mesh:setVertexMap(1, 2, 3, 4, 5, 2)
+    mesh:setVertexMap(1,2, 3, 4, 5, 2)
+    -- print(mesh:getDrawRange())
 end
  
 function love.draw()
