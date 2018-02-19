@@ -3,7 +3,7 @@ function love.load()
 
 	psystem = love.graphics.newParticleSystem(img, 32) -- 最多有32个粒子同时存在
 	psystem:setParticleLifetime(2, 10) -- 例子的生命周期范围，秒
-	psystem:setEmissionRate(2) -- 设置发射率,值越大越高
+	psystem:setEmissionRate(2) -- 设置发射率,值越大越高 如果不设置这个值，那么可以再需要出现粒子的时候调用 psystem:emit(32) 32 表示缓存满时的截断粒子数量
   psystem:setSizes(1,1.2,0.1) -- 粒子从出现到消失的过程中大小会发生变化
 	psystem:setSizeVariation(1) -- 设置尺寸变化 没有很明白什么作用 ，跟 setSizes 有关联，0的时候发射的粒子都是原始大小，1的时候发射粒子有大有小
 	psystem:setLinearAcceleration(-20, -20, 0, 0) -- 往左上方向随机移动
