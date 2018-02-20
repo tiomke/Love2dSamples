@@ -5,6 +5,7 @@ love2d的一些小例子
 canvas
 stencil
 batch/particle
+array textures
 video
 physics
 multi-player
