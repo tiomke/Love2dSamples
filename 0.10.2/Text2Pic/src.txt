@@ -1,0 +1,8 @@
+DailyLife = function ()
+    You.Hold(I.hand)
+    I.Watch(You.eye)
+end
+
+while true do
+  DailyLife()
+end
