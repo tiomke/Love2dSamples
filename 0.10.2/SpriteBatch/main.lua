@@ -23,7 +23,7 @@ end
 
 -- SpriteBatch:attachAttribute() -- TODO 有待了解
 -- SpriteBatch:add() -- 把一个精灵添加到 batch 上（实际上相当于提供一个 transform 信息）
--- SpriteBatch:set() -- 更换 batch 上的精灵
+-- SpriteBatch:set() -- 更换 batch 上的精灵，也可以设置 quad
 -- SpriteBatch:clear() -- 从 buffer 中移除所有精灵
 -- SpriteBatch:flush() -- 把改动后的数据立马送显卡
 -- SpriteBatch:getCount() -- 获取当前的 SpriteBatch 对象数量
