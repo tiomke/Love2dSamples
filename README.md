@@ -20,4 +20,9 @@ array textures
 video
 physics
 multi-player
+shader
+
+场景管理
+地图缩放
+
 
