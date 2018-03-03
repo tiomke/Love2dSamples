@@ -39,11 +39,7 @@ luac.out
 *.x86_64
 *.hex
 
-# *.DS_Store
-# */.DS_Store
-# .DS_Store
+*.DS_Store
 
-*.tag
-*.tag1
-.tag
-*/.tag1
+*.tags
+*.tags1
