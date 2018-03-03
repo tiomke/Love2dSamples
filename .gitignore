@@ -43,3 +43,5 @@ luac.out
 */.DS_Store
 .DS_Store
 
+*.tag
+*.tag1
