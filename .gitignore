@@ -40,8 +40,8 @@ luac.out
 *.hex
 
 *.DS_Store
-*/.DS_Store
-.DS_Store
+# */.DS_Store
+# .DS_Store
 
 *.tag
 *.tag1
