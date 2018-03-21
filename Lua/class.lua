@@ -60,13 +60,16 @@ function class(name)
 
 
 	-- 创建对象
-	class_obj.new = function()
+	class_obj.new = function(_,...)
 		--------------------------------------------------
 		-- 定义对象 start
 		--------------------------------------------------
 		local obj = {}
 		obj.__class = class_obj
 
+		if class_obj.Ctor then
+			class_obj.Ctor(obj,...)
+		end
 
 		setmetatable(obj,class_obj) -- TODO 对象的权限跟类的权限应当是不同的
 		return obj
@@ -86,16 +89,16 @@ class("CFruit") -- 创建一个全局类 CFruit
 CFruit("m_Name") -- 定义类变量
 CFruit("m_Size")
 CFruit("m_Color")
-CFruit.m_Name = "Fruit"
--- function CFruit:Ctor()
-
--- end
+-- CFruit.m_Name = "Fruit"
+function CFruit:Ctor(name)
+	self.m_Name = name
+end
 
 function CFruit:Move(x,y)
 	print("moveto",x,y)
 end
 
-peach = CFruit:new()
+peach = CFruit:new("peach")
 print(peach.m_Name)
 
 peach.m_Name = "hello"
@@ -103,4 +106,8 @@ print(peach.m_Name,peach:GetType())
 
 peach:Move(1,2) -- 调用类函数
 
-peach.m_Name1 = "good" -- 会报错
+-- peach.m_Name1 = "good" -- 会报错
+
+
+apple = CFruit:new("apple")
+print(apple.m_Name)
