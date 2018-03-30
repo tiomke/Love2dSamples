@@ -1,4 +1,3 @@
--- 参考下看看 https://github.com/ArchAngel075/loveballs/tree/ce8336fb51e89c9dc706979dc2007234978bb948
 --[[
 Distance Joint
 距离关节
@@ -85,6 +84,9 @@ function love.draw()
   love.graphics.circle("fill", body3.Body:getX(), body3.Body:getY(), body3.Shape:getRadius())
 	love.graphics.setColor(200, 200, 0, 255)
 	love.graphics.line(joint:getAnchors())
+	if msjoint then
+		love.graphics.line(msjoint:getAnchors())
+	end
 end
 
 
@@ -116,7 +118,7 @@ function love.keypressed(key, scancode, isrepeat)
 end
 
 function love.mousepressed(x, y)
- 	msjoint = love.physics.newMouseJoint(body2.Body, body2.Body:getX(), body2.Body:getY())
+ 	msjoint = love.physics.newMouseJoint(body2.Body, x,y)
 end
 
 function love.mousereleased(x, y, button, isTouch)
